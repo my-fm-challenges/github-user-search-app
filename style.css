@@ -27,6 +27,28 @@
   --color-blue-500: #0079ff;
   --color-red-500: #f74646;
 
+  /* ===== Color roles (Light theme) ===== */
+  --color-bg-page: var(--color-neutral-100); /* page background */
+  --color-bg-card: var(--color-neutral-0); /* profile card and search bar */
+  --color-bg-stats: var(--color-neutral-100); /* Repos / Followers / Following block */
+
+  /* Text */
+  --color-text-strong: var(--color-neutral-700); /* name, stats numbers, logo */
+  --color-text: var(--color-neutral-500); /* bio, links, labels, placeholder */
+  --color-text-muted: var(--color-neutral-300); /* "Joined …" date */
+
+  /* Theme toggle button */
+  --color-toggle: var(--color-neutral-500);
+  --color-toggle-hover: var(--color-neutral-900);
+
+  /* Accent and miscellaneous */
+  --color-accent: var(--color-blue-500); /* Search button, @username */
+  --color-accent-hover: var(--color-blue-300);
+  --color-on-accent: var(--color-neutral-0); /* text on the blue button */
+  --color-error: var(--color-red-500); /* "No results" */
+
+  --shadow-card: 0 16px 30px -10px rgb(70 96 187 / 0.2);
+
   --spacing-0: 0;
   --spacing-025: 2px;
   --spacing-050: 4px;
@@ -55,4 +77,67 @@
   --radius-full: 999px;
 
   --font-base: "Space Mono", monospace;
+
+  --text-preset-1-size: 1.625rem; /* 26px */
+  --text-preset-1-line-height: 1.2; /* 120% */
+  --text-preset-1-font-weight: 700; /* Bold */
+
+  --text-preset-2-size: 1.375rem; /* 22px */
+  --text-preset-2-line-height: 1.4; /* 140% */
+  --text-preset-2-line-font-weight: 700; /* Bold */
+
+  --text-preset-3-size: 1.125rem; /* 18px */
+  --text-preset-3-line-height: 1.4; /* 140% */
+  --text-preset-3-font-weight: 400; /* regular */
+
+  --text-preset-3-size-mobile: 0.8125rem; /* 13px */
+
+  --text-preset-4-size: 1rem; /* 16px */
+  --text-preset-4-line-height: 1.5; /* 150% */
+  --text-preset-4-font-weight: 400; /* regular */
+
+  --text-preset-5-size: 1rem; /* 16px */
+  --text-preset-5-line-height: 1.5; /* 150% */
+  --text-preset-5-font-weight: 700; /* Bold */
+
+  --text-preset-6-size: 0.9375rem; /* 15px */
+  --text-preset-6-line-height: 1.5; /* 150% */
+  --text-preset-6-font-weight: 400; /* regular */
+
+  --text-preset-7-size: 0.8125rem; /* 13px */
+  --text-preset-7-line-height: 1.5; /* 150% */
+  --text-preset-7-font-weight: 400; /* regular */
+
+  --text-preset-8-size: 0.8125rem; /* 13px */
+  --text-preset-8-line-height: 1.4; /* 140% */
+  --text-preset-8-font-weight: 700; /* Bold */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+ol,
+figure,
+blockquote {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text);
+  font-family: var(--font-base);
 }
