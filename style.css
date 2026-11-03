@@ -54,5 +54,5 @@
   --radius-24: 24px;
   --radius-full: 999px;
 
-  --font-base: "Space Mono", system-ui;
+  --font-base: "Space Mono", monospace;
 }
