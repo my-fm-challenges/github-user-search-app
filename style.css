@@ -1,3 +1,19 @@
+@font-face {
+  font-display: swap;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/space-mono-v17-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/space-mono-v17-latin-700.woff2") format("woff2");
+}
+
 :root {
   --color-neutral-900: #141d2f;
   --color-neutral-800: #1e2a47;
@@ -7,9 +23,9 @@
   --color-neutral-200: #90a4d4;
   --color-neutral-100: #f6f8ff;
   --color-neutral-0: #ffffff;
-
   --color-blue-300: #60abff;
   --color-blue-500: #0079ff;
-
   --color-red-500: #f74646;
+
+  --font-base: "Space Mono", system-ui;
 }
