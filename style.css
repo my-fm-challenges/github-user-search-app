@@ -49,32 +49,32 @@
 
   --shadow-card: 0 16px 30px -10px rgb(70 96 187 / 0.2);
 
-  --spacing-0: 0;
-  --spacing-025: 2px;
-  --spacing-050: 4px;
-  --spacing-075: 6px;
-  --spacing-100: 8px;
-  --spacing-125: 10px;
-  --spacing-150: 12px;
-  --spacing-200: 16px;
-  --spacing-250: 20px;
-  --spacing-300: 24px;
-  --spacing-400: 32px;
-  --spacing-500: 40px;
-  --spacing-600: 48px;
-  --spacing-800: 64px;
-  --spacing-1000: 80px;
+  --spacing-0: 0; /* 0px */
+  --spacing-025: 0.125rem; /* 2px */
+  --spacing-050: 0.25rem; /* 4px */
+  --spacing-075: 0.375rem; /* 6px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-125: 0.625rem; /* 10px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-250: 1.25rem; /* 20px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-1000: 5rem; /* 80px */
 
-  --radius-0: 0;
-  --radius-4: 4px;
-  --radius-6: 6px;
-  --radius-8: 8px;
-  --radius-10: 10px;
-  --radius-12: 12px;
-  --radius-16: 16px;
-  --radius-20: 20px;
-  --radius-24: 24px;
-  --radius-full: 999px;
+  --radius-0: 0; /* 0px */
+  --radius-4: 0.25rem; /* 4px */
+  --radius-6: 0.375rem; /* 6px */
+  --radius-8: 0.5rem; /* 8px */
+  --radius-10: 0.625rem; /* 10px */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+  --radius-20: 1.25rem; /* 20px */
+  --radius-24: 1.5rem; /* 24px */
+  --radius-full: 62.4375rem; /* 999px */
 
   --font-base: "Space Mono", monospace;
 
@@ -84,13 +84,11 @@
 
   --text-preset-2-size: 1.375rem; /* 22px */
   --text-preset-2-line-height: 1.4; /* 140% */
-  --text-preset-2-line-font-weight: 700; /* Bold */
+  --text-preset-2-font-weight: 700; /* Bold */
 
   --text-preset-3-size: 1.125rem; /* 18px */
   --text-preset-3-line-height: 1.4; /* 140% */
   --text-preset-3-font-weight: 400; /* regular */
-
-  --text-preset-3-size-mobile: 0.8125rem; /* 13px */
 
   --text-preset-4-size: 1rem; /* 16px */
   --text-preset-4-line-height: 1.5; /* 150% */
@@ -119,25 +117,42 @@
   box-sizing: border-box;
 }
 
+/* 1. Убираем только внешние отступы у текстовых блоков */
 body,
 h1,
 h2,
 h3,
-ul,
-ol,
+h4,
+p,
 figure,
-blockquote {
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
-img {
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
   display: block;
-  max-width: 100%;
-  height: auto;
+  max-inline-size: 100%;
+  block-size: auto;
 }
 
 body {
   background-color: var(--color-bg-page);
   color: var(--color-text);
   font-family: var(--font-base);
+}
+
+button,
+input {
+  font: inherit; /* шрифт, размер, жирность, line-height как у родителя */
+  color: inherit; /* цвет текста как у родителя (нужно для тёмной темы) */
 }
