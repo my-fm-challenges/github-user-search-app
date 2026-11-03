@@ -109,6 +109,7 @@
   --text-preset-8-size: 0.8125rem; /* 13px */
   --text-preset-8-line-height: 1.4; /* 140% */
   --text-preset-8-font-weight: 700; /* Bold */
+  --text-preset-8-letter-spacing: .1563rem; /* 2.5px */
 }
 
 *,
@@ -149,6 +150,8 @@ body {
   background-color: var(--color-bg-page);
   color: var(--color-text);
   font-family: var(--font-base);
+  line-height: 1.5;
+  font-size: var(--text-preset-6-size);
 }
 
 button,
